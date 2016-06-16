@@ -11,7 +11,7 @@ import javax.net.ssl.HttpsURLConnection
 fun sendTextToSlack(text: String) {
     sendJsonToSlack(
             """{
-            "username": "Youtrack bot",
+            "username": "YouTrack Bot",
             "icon_emoji": ":youtrack:",
             "text": "$text",
             "mrkdwn": true,
