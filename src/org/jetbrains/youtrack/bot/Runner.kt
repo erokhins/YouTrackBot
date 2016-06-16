@@ -4,9 +4,9 @@ import java.util.*
 
 val file = "issues.xml"
 val unassigned = "[Unassigned]"
-val url = System.getProperty("slack.url") ?: ""
+val url = System.getenv("slack.url") ?: ""
 
-val settings = System.getProperty("slack.settings") ?: ""
+val settings = System.getenv("slack.settings") ?: ""
 
 data class Issue(
         val id: String,
