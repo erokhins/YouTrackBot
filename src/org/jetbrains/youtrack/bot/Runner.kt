@@ -17,7 +17,7 @@ data class Issue(
 )
 
 fun sendErrorToSlack(message: String): Nothing {
-    sendTextToSlack("message \n @stanislav.erokhin")
+    sendTextToSlack("$message \n @stanislav.erokhin")
     error(message)
 }
 
