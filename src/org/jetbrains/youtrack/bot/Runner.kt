@@ -16,6 +16,11 @@ data class Issue(
         val assignee: String
 )
 
+fun sendErrorToSlack(message: String): Nothing {
+    sendTextToSlack("message \n @stanislav.erokhin")
+    error(message)
+}
+
 fun main(args: Array<String>) {
     if (url.isEmpty() || settings.isEmpty()) {
         error("You should set url and settings")
@@ -32,7 +37,7 @@ fun main(args: Array<String>) {
 
     for (issue in issues) {
         if (issue.assignee != unassigned) {
-            val nik = nameToNik[issue.assignee] ?: error("Unknown name: ${issue.assignee}")
+            val nik = nameToNik[issue.assignee] ?: sendErrorToSlack("Unknown name: ${issue.assignee}")
             issue.toNik(nik)
         }
         else {
@@ -42,7 +47,7 @@ fun main(args: Array<String>) {
             }
             else {
                 subsystems.forEach {
-                    val nik = subsystemsManagers[it] ?: error("Unknown subsystem: $it")
+                    val nik = subsystemsManagers[it] ?: sendErrorToSlack("Unknown subsystem: $it")
                     issue.toNik(nik)
                 }
             }
