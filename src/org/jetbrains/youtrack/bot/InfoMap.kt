@@ -10,7 +10,7 @@ val subsystemsManagers = mapOf(
         "Front-end. Lexer & Parser" to "@denis.zharkov",
 
         "Java Descriptors and Signatures" to "@denis.zharkov",
-        "Back-end. JVM" to "@udalov",
+        "Back-end. JVM" to "@dmitry.petrov",
         "Back-end. JavaScript" to "@bashor",
         "Language design" to "@abreslav",
         "Reflection" to "@udalov",
