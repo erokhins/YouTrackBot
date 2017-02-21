@@ -41,6 +41,7 @@ val subsystemsManagers = mapOf(
         "Web Demo" to "@romanbelov",
         "Web Site" to "@romanbelov",
         "Infrastructure" to "@yole", // todo
+        "IR" to "@dmitry.petrov",
         "[No subsystem]" to "@yole"
 )
 
