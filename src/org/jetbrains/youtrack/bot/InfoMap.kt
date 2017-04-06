@@ -42,6 +42,7 @@ val subsystemsManagers = mapOf(
         "Web Site" to "@romanbelov",
         "Infrastructure" to "@yole", // todo
         "IR" to "@dmitry.petrov",
+        "Native" to "@nikolay.igotti",
         "[No subsystem]" to "@yole"
 )
 
