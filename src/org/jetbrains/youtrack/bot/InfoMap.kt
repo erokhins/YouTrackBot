@@ -16,7 +16,7 @@ val subsystemsManagers = mapOf(
         "Reflection" to "@udalov",
         "Binary Metadata" to "@udalov",
         "Libraries" to "@ilya.gorbunov",
-        "Android" to "@yan",
+        "Android" to "@vyacheslav.gerasimov",
 
         "Tools" to "@alexey.tsvetkov",
         "Tools. Ant" to "@udalov",
@@ -24,11 +24,11 @@ val subsystemsManagers = mapOf(
         "Tools. CLI" to "@udalov",
         "Tools. kapt" to "@yan",
         "Tools. REPL" to "@udalov",
-        "Tools. Dokka" to "@yole",
-        "Tools. Gradle" to "@alexey.tsvetkov",
-        "Tools. J2K" to "@yole",
+        "Tools. Dokka" to "@semoro",
+        "Tools. Gradle" to "@sergey.igushkin",
+        "Tools. J2K" to "@semoro",
         "Docs" to "@yole",
-        "Tools. JPS" to "@bashor",
+        "Tools. JPS" to "@alexey.tsvetkov",
 
         "IDE" to "@yole",
         "IDE. Completion" to "@yole",
@@ -53,6 +53,7 @@ val nameToNik = mapOf(
         "Andrey Breslav" to "@abreslav",
         "Anton Bannykh" to "@anton.bannykh",
         "Alexey Sedunov" to "@alexey.sedunov",
+        "Sergey Kuks" to "@qx",
         "Sergey Mashkov" to "@sergey.mashkov",
         "Denis Zharkov" to "@denis.zharkov",
         "Dmitry Petrov" to "@dmitry.petrov",
@@ -60,14 +61,18 @@ val nameToNik = mapOf(
         "Nikolay Krasko" to "@nk",
         "Sergey Igushkin" to "@sergey.igushkin",
         "Hadi Hariri" to "hhariri (@romanbelov)", // todo
+        "Igor Chevdar" to "@igor.chevdar", 
         "Ilya Chernikov" to "@ilya.chernikov",
         "Ilya Gorbunov" to "@ilya.gorbunov",
+        "Ilya Matveev" to "@ilya.matveev",
         "Konstantin Anisimov" to "@konstantin.anisimov",
         "Maxim Shafirov" to "max (@yole)", // todo
         "Michael Bogdanov" to "@max.kammerer",
         "Mikhail Glukhikh" to "@mikhailglukhikh",
         "Natalia Ukhorskaya" to "nastelaz (@nk)", // todo
+        "Nicolay Mitropolsky" to "@nicolay.mitropolsky",
         "Nikolay Chashnikov" to "nik (@yole)", // todo
+        "Nikolay Igotti" to "@nikolay.igotti",
         "Vladimir Reshetnikov" to "@vladimir.reshetnikov",
         "Ilya Ryzhenkov" to "@orangy",
         "Pavel Talanov" to "@pavel.talanov",
@@ -89,7 +94,5 @@ val nameToNik = mapOf(
         "Dmitry Jemerov" to "@yole",
         "Zalim Bashorov" to "@bashor",
         "Mikhail Zarechenskiy" to "@mikhail.zarechenskiy",
-        "Stas Kurilov" to "@romanbelov",
-        "Sergey Kuks" to "@qx"
-        
+        "Stas Kurilov" to "@romanbelov"
 )
