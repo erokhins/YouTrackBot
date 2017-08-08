@@ -47,6 +47,7 @@ val subsystemsManagers = mapOf(
 )
 
 val nameToNik = mapOf(
+        "Aleksandr Gribovich" to "Aleksandr Gribovich", // todo 
         "Alexander Gorshenev" to "@alexander.gorshenev",
         "Alexey Andreev" to "@alexey.andreev",
         "Alina Dolgikh" to "@alina.dolgikh",
@@ -58,6 +59,7 @@ val nameToNik = mapOf(
         "Sergey Mashkov" to "@sergey.mashkov",
         "Denis Zharkov" to "@denis.zharkov",
         "Dmitry Petrov" to "@dmitry.petrov",
+        "Dmitry Savvinov" to "@dmitry.savvinov",
         "Roman Elizarov" to "@elizarov",
         "Nikolay Krasko" to "@nk",
         "Sergey Igushkin" to "@sergey.igushkin",
@@ -67,6 +69,7 @@ val nameToNik = mapOf(
         "Ilya Gorbunov" to "@ilya.gorbunov",
         "Ilya Matveev" to "@ilya.matveev",
         "Konstantin Anisimov" to "@konstantin.anisimov",
+        "Lilia Abdulina" to "@lilia",
         "Maxim Shafirov" to "max (@yole)", // todo
         "Michael Bogdanov" to "@max.kammerer",
         "Mikhail Glukhikh" to "@mikhailglukhikh",
