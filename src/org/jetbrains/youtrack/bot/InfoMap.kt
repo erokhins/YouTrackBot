@@ -70,6 +70,7 @@ val nameToNik = mapOf(
         "Ilya Matveev" to "@ilya.matveev",
         "Konstantin Anisimov" to "@konstantin.anisimov",
         "Lilia Abdulina" to "@lilia",
+        "Liana Bakradze" to "@liana",
         "Maxim Shafirov" to "max (@yole)", // todo
         "Michael Bogdanov" to "@max.kammerer",
         "Mikhail Glukhikh" to "@mikhailglukhikh",
