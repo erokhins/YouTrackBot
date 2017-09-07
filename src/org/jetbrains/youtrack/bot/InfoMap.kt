@@ -29,7 +29,8 @@ val subsystemsManagers = mapOf(
         "Tools. J2K" to "@semoro",
         "Docs" to "@yole",
         "Tools. JPS" to "@alexey.tsvetkov",
-
+        "Tools. Incremental Compile" to "@alexey.tsvetkov",
+        
         "IDE" to "@yole",
         "IDE. Completion" to "@yole",
         "IDE. Edu" to "@romanbelov",
