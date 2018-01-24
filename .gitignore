@@ -1,3 +1,11 @@
-.idea/workspace.xml
-/out
+.DS_Store
+*.versionsBackup
+workspace.xml
+.idea/shelf
+.gradle/
+build/
+!**/src/**/build
+!**/test/**/build
+*.iml
+
 issues.xml
