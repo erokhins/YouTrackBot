@@ -16,9 +16,8 @@ data class Issue(
         val assignee: String
 )
 
-fun sendErrorToSlack(message: String): Nothing {
-    sendTextToSlack("$message \n @stanislav.erokhin")
-    error(message)
+fun sendErrorToSlack(issue: Issue, message: String) {
+    sendTextToSlack("${issue.render()}: $message (@stanislav.erokhin)")
 }
 
 fun main(args: Array<String>) {
@@ -37,8 +36,13 @@ fun main(args: Array<String>) {
 
     for (issue in issues) {
         if (issue.assignee != unassigned) {
-            val nik = nameToNik[issue.assignee] ?: sendErrorToSlack("Unknown name: ${issue.assignee}")
-            issue.toNik(nik)
+            val nik = nameToNik[issue.assignee]
+
+            if (nik != null) {
+                issue.toNik(nik)
+            } else {
+                sendErrorToSlack(issue, "Unknown name: ${issue.assignee}")
+            }
         }
         else {
             val subsystems = issue.subsystems
@@ -47,8 +51,12 @@ fun main(args: Array<String>) {
             }
             else {
                 subsystems.forEach {
-                    val nik = subsystemsManagers[it] ?: sendErrorToSlack("Unknown subsystem: $it")
-                    issue.toNik(nik)
+                    val nik = subsystemsManagers[it]
+                    if (nik != null) {
+                        issue.toNik(nik)
+                    } else {
+                        sendErrorToSlack(issue,"Unknown subsystem: $it")
+                    }
                 }
             }
         }
@@ -61,7 +69,7 @@ fun main(args: Array<String>) {
     result.appendln("Красным отмечены тикеты, которые созданы более ${IssueColor.RED.days} дней назад. Жирным -- более ${IssueColor.BOLD.days} дней.")
     for ((person, personIssues) in sortedIssues) {
         val messageForPerson = createMessageForPerson(person, personIssues) ?: continue
-        result.appendln("$messageForPerson")
+        result.appendln(messageForPerson)
     }
 
     sendTextToSlack(result.toString())

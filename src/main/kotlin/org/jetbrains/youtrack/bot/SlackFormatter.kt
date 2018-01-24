@@ -21,7 +21,7 @@ private val Issue.color: IssueColor get() {
     }
 }
 
-private fun Issue.render() = "${color.mark}<https://youtrack.jetbrains.com/issue/$id|$id>${color.mark}"
+fun Issue.render() = "${color.mark}<https://youtrack.jetbrains.com/issue/$id|$id>${color.mark}"
 
 fun createMessageForPerson(nik: String, issues: Set<Issue>): String? {
     @Suppress("NAME_SHADOWING")
