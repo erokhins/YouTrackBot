@@ -2,7 +2,8 @@ package org.jetbrains.youtrack.bot
 
 import org.w3c.dom.Element
 import org.w3c.dom.NodeList
-import java.io.File
+import org.xml.sax.InputSource
+import java.io.StringReader
 import java.util.*
 import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.properties.ReadOnlyProperty
@@ -74,13 +75,12 @@ class IssueParser {
     }
 }
 
-fun parseIssues(filename: String): List<Issue> {
+fun parseIssues(xml: String): List<Issue> {
     val factory = DocumentBuilderFactory.newInstance()
     factory.isValidating = false
     factory.isIgnoringElementContentWhitespace = true
     val builder = factory.newDocumentBuilder()
-    val file = File(filename).apply { if (!exists()) error("File does not exist: $this") }
-    val doc = builder.parse(file)
+    val doc = builder.parse(InputSource(StringReader(xml)))
 
     val result = ArrayList<Issue>()
     val issueParser = IssueParser()
