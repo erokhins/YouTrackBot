@@ -1,12 +1,20 @@
 package org.jetbrains.youtrack.bot
 
+import java.io.*
+import java.net.URL
 import java.util.*
+
+enum class Project(val query: String) {
+    Kotlin("https://youtrack.jetbrains.com/rest/issue/byproject/KT?filter=State:Submitted&max=500"),
+    Native("https://youtrack.jetbrains.com/rest/issue/byproject/KT?filter=Subsystems:+native+State:Submitted")
+}
 
 val file = "issues.xml"
 val unassigned = "[Unassigned]"
-val url = System.getenv("slack.url") ?: ""
 
+val url = System.getenv("slack.url") ?: ""
 val settings = System.getenv("slack.settings") ?: ""
+val subproject: String = System.getenv("slack.subproject") ?: "Kotlin"
 
 data class Issue(
         val id: String,
@@ -20,10 +28,19 @@ fun sendErrorToSlack(issue: Issue, message: String) {
     sendTextToSlack("${issue.render()}: $message (@stanislav.erokhin)")
 }
 
+fun getIssuesByQuery(query: String) {
+    val f = File(file)
+    f.takeIf { it.exists() } ?.delete()
+
+    val issues = BufferedReader(InputStreamReader(URL(query).openStream())).use { it.readText() }
+    with(FileWriter(f)) { use {write(issues) } }
+}
+
 fun main(args: Array<String>) {
-    if (url.isEmpty() || settings.isEmpty()) {
-        error("You should set url and settings")
+    if (url.isEmpty() || settings.isEmpty() || subproject.isEmpty()) {
+        error("You should set url, settings and subproject")
     }
+    getIssuesByQuery(Project.valueOf(subproject).query)
 
     val issues = parseIssues(file)
     val issuesByNik = HashMap<String, MutableSet<Issue>>()

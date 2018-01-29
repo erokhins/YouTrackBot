@@ -26,12 +26,8 @@ private fun sendJsonToSlack(json: String) {
 
     // Send post request
     con.doOutput = true
-    val wr = BufferedWriter(OutputStreamWriter(con.outputStream, "UTF-8"))
-    try {
-        wr.write(json)
-        wr.flush()
-    } finally {
-        wr.close()
+    with(BufferedWriter(OutputStreamWriter(con.outputStream, "UTF-8"))) {
+        use { write(json) }
     }
 
     val responseCode = con.responseCode
@@ -42,10 +38,7 @@ private fun sendJsonToSlack(json: String) {
     println("Response Code : " + responseCode)
 
     val output = if (responseCode == 200) con.inputStream else con.errorStream
-    val outputReader = BufferedReader(InputStreamReader(output))
-
-    while (true) {
-        println(outputReader.readLine() ?: break)
+    with(BufferedReader(InputStreamReader(output))) {
+        use { println(readText()) }
     }
-    outputReader.close()
 }
