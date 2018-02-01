@@ -42,7 +42,7 @@ val subsystemsManagers = mapOf(
         "Eclipse Plugin" to "@mikhail.zarechenskiy",
         "Web Demo" to "@romanbelov",
         "Web Site" to "@romanbelov",
-        "Infrastructure" to "@Vyacheslav Gerasimov",
+        "Infrastructure" to "@vyacheslav.gerasimov",
         "IR" to "@dmitry.petrov",
         "Native" to "@nikolay.igotti",
         "[No subsystem]" to "@sashache"
