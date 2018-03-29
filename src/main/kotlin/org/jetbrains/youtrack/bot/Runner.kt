@@ -55,7 +55,7 @@ fun main(args: Array<String>) {
                     if (nik != null) {
                         issue.toNik(nik)
                     } else {
-                        sendErrorToSlack(issue,"Unknown subsystem: $it")
+//                        sendErrorToSlack(issue,"Unknown subsystem: $it")
                     }
                 }
             }
