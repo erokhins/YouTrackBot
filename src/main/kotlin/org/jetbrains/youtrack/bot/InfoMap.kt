@@ -3,22 +3,30 @@ package org.jetbrains.youtrack.bot
 val noSubsystemManager = "@yole"
 
 val subsystemsManagers = mapOf(
-        "Front-end" to "@stanislav.erokhin",
-        "Front-end. Declarations" to "@dmitry.petrov",
-        "Front-end. Resolution and Inference" to "@stanislav.erokhin",
-        "Front-end. Control-flow analysis" to "@dmitry.savvinov",
-        "Front-end. Lexer & Parser" to "@denis.zharkov",
-
-        "Java Descriptors and Signatures" to "@denis.zharkov",
-        "Back-end. JVM" to "@dmitry.petrov",
-        "Back-end. JavaScript" to "@bashor",
-        "Language design" to "@denis.zharkov",
-        "Reflection" to "@udalov",
-        "Binary Metadata" to "@udalov",
-        "Libraries" to "@ilya.gorbunov",
         "Android" to "@yan",
 
+        "Backend. JS" to "@bashor",
+        "Backend. JVM" to "@udalov",
+        "Backend. JVM. Coroutines" to "@ilmir.usmanov",
+        "Backend. JVM. Inline" to "@ilmir.usmanov",        
+        "Binary Metadata" to "@udalov",        
+        
         "Docs" to "@sergey.igushkin",
+        "Eclipse Plugin" to "@mikhail.zarechenskiy",
+        
+        "Frontend" to "@stanislav.erokhin",
+        "Frontend. Control-flow analysis" to "@dmitry.savvinov",
+        "Frontend. Data-flow analysis" to "@dmitry.savvinov",
+        "Frontend. Declarations" to "@dmitry.petrov",
+        "Frontend. Lexer & Parser" to "@denis.zharkov",
+        "Frontend. Resolution and Inference" to "@mikhail.zarechenskiy",
+        "Frontend. Scripting" to "@ilya.chernikov",
+        
+        "Java Descriptors and Signatures" to "@denis.zharkov",
+        "Language design" to "@denis.zharkov",
+        "Reflection" to "@udalov",
+        "Libraries" to "@ilya.gorbunov",
+
 
         "Tools" to "@alexey.tsvetkov",
         "Tools. Ant" to "@udalov",
@@ -66,7 +74,6 @@ val subsystemsManagers = mapOf(
         "IDE. UAST" to "@nicolay.mitropolsky",
         "IDE. Ultimate" to "@alexey.sedunov",
 
-        "Eclipse Plugin" to "@mikhail.zarechenskiy",
         "Web Demo" to "@romanbelov",
         "Web Site" to "@romanbelov",
         "Infrastructure" to "@vyacheslav.gerasimov",
