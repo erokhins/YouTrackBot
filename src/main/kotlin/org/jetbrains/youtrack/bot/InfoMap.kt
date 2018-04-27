@@ -1,6 +1,6 @@
 package org.jetbrains.youtrack.bot
 
-val noSubsystemManager = "@yole"
+val noSubsystemManager = "@sashache"
 
 val subsystemsManagers = mapOf(
         "Android" to "@yan",
