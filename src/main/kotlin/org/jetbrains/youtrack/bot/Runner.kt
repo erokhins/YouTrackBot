@@ -65,7 +65,7 @@ fun main(args: Array<String>) {
 
     val result = StringBuilder()
 
-    result.appendln("Всего submitted тикетов: ${issues.size}")
+    result.appendln("Всего Submitted/(#IDE | #Tools)/#{No Priority} тикетов c 23 апреля: ${issues.size}")
     result.appendln("Красным отмечены тикеты, которые созданы более ${IssueColor.RED.days} дней назад. Жирным -- более ${IssueColor.BOLD.days} дней.")
     for ((person, personIssues) in sortedIssues) {
         val messageForPerson = createMessageForPerson(person, personIssues) ?: continue
