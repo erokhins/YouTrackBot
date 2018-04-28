@@ -29,6 +29,7 @@ val subsystemsManagers = mapOf(
 
 
         "Tools" to "@alexey.tsvetkov",
+        "Tools. Android Extensions" to "@yan",
         "Tools. Ant" to "@udalov",
         "Tools. CLI" to "@udalov",
         "Tools. Compiler Plugins" to "@yan",
