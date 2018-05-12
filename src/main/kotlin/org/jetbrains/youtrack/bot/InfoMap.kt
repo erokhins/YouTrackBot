@@ -46,7 +46,7 @@ val subsystemsManagers = mapOf(
         "IDE" to "@alefas",
         "IDE. Android" to "@yan",
         "IDE. Code Insight" to "@alexey.sedunov",
-        "IDE. Code Style" to "@nk",
+        "IDE. Code Style, Formatting" to "@nk",
         "IDE. Completion" to "@alefas",
         "IDE. Configuration" to "@alexey.sedunov",
         "IDE. Debugger" to "@yan",
