@@ -108,7 +108,7 @@ val nameToNik = mapOf(
         "Ilya Gorbunov" to "@ilya.gorbunov",
         "Ilya Matveev" to "@ilya.matveev",
         "Konstantin Anisimov" to "@konstantin.anisimov",
-        "Leonid Startsev" to "@Leonid.Startsev",
+        "Leonid Startsev" to "@Leonid Startsev",
         "Leonid Stashevsky" to "@leonid.stashevsky",
         "Lilia Abdulina" to "@lilia",
         "Maxim Shafirov" to "max (@stanislav.erokhin)", // todo
@@ -119,7 +119,7 @@ val nameToNik = mapOf(
         "Nikolay Chashnikov" to "nik (@stanislav.erokhin)", // todo
         "Nikolay Igotti" to "@nikolay.igotti",
         "Ilya Ryzhenkov" to "@orangy",
-        "Pavel Punegov" to "@Pavel.Punegov",
+        "Pavel Punegov" to "@Pavel Punegov",
         "Pavel Talanov" to "@pavel.talanov",
         "Roman Belov" to "@romanbelov",
         "Alexander Chernikov" to "@sashache",
